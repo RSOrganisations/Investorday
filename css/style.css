@@ -7690,3 +7690,28 @@ display:table;
 		border-radius: 50%;
 		margin: auto;
 	}
+	.formWrap{
+		
+padding: 30px;
+    background-size: cover;
+    background: #ddffe7;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 67px;
+	}
+	.formWrap label, .formWrap input{
+		width: 100%;
+		background: #ddffe7;
+	}
+	.formWrap label{
+		margin-top: 9px;
+		color: #000;
+		text-align: left;
+	}
+	.formWrap button{
+		margin-top: 17px;
+    border: 1px solid;
+    border-radius: 18px;
+    padding: 4px 19px;
+	}
