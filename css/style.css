@@ -3260,6 +3260,7 @@ border:solid 1px #ddd;
 	padding-bottom:5px;
 	background: #101010;
 	text-align:center;	
+	min-height: 365px;
 }
 .pricing-s1 .bottom ul {
 	list-style: none;
@@ -7670,4 +7671,22 @@ display:table;
 	.grid-item .pf_title{
 		display:none;
 	}
+	}
+	}
+
+	.width-icon{
+		width: 100px;
+		margin-top: 29px;
+	}
+	.text-logo{
+		color: #ddffe7;
+    margin-top: 15px;
+	}
+	.box-icon{
+		background-size: cover;
+		width: 200px;
+		height: 200px;
+		border: 2px solid #ddffe7;
+		border-radius: 50%;
+		margin: auto;
 	}
