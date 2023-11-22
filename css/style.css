@@ -3227,7 +3227,6 @@ border:solid 1px #ddd;
 	box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, .4);
 }
 .pricing-s1 .top {
-	background: #101010;
 	color: #eee;
 	padding: 40px;
 	color: #ECF0F1;
@@ -3258,7 +3257,6 @@ border:solid 1px #ddd;
 .pricing-s1 .bottom {
 	border-top: 0px;
 	padding-bottom:5px;
-	background: #101010;
 	text-align:center;	
 	min-height: 365px;
 }
@@ -4349,7 +4347,7 @@ background:rgba(0,0,0,.3);
 }
 
 .de-video-overlay.t50{
-background:rgba(0,0,0,.5);
+background:rgba(0,0,0,0%);
 }
 
 .de-video-overlay.dotted{
@@ -7699,10 +7697,12 @@ padding: 30px;
     position: absolute;
     top: 0;
     right: 67px;
+	border-radius: 40px;
 	}
 	.formWrap label, .formWrap input{
 		width: 100%;
 		background: #ddffe7;
+		border-radius: 2px;
 	}
 	.formWrap label{
 		margin-top: 9px;
@@ -7714,4 +7714,41 @@ padding: 30px;
     border: 1px solid;
     border-radius: 18px;
     padding: 4px 19px;
+	background: #167d7f;
+	text-transform: uppercase;
+	color: #fff;
 	}
+	.btn-color{
+		background: #167d7f !important;
+
+	}
+	.bg-gradients{
+		background: linear-gradient(to bottom, #031721, #025e50,#031722 );
+
+	}
+	.scheduleWrap{
+		background: linear-gradient(to bottom, #031721, #025e50,#031722 );
+		padding: 100px 0PX;
+		border-radius: 50px;
+	}
+	.scheduleWrap table{
+		width: 90%;
+		margin: auto;
+	}
+	.scheduleWrap table td{
+		font-size: 32px;
+		color: #ddffe7;
+		padding: 20px;
+	}
+	.scheduleWrap table td:first-child{
+		text-align: left;
+	}
+	.head{
+	    letter-spacing: 3px;
+		font-size: 4em;
+		-webkit-text-stroke: 3px darkgrey;
+		-webkit-text-fill-color: #ffffff00;
+		-webkit-animation: fill 0.5s infinite alternate;
+	
+}
+	
