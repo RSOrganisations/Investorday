@@ -1282,18 +1282,18 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                     
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" id="model_close">&times;</button>
                 
                       <div class="modal-body">
                         <div class="formWrap">
                             <label>Name</label>
-                            <input name="name" />
+                            <input name="name" id="name"/>
                             <label>Email id.</label>
-                            <input name="email" />
+                            <input name="email" id="email" />
                             <label>Contact no.</label>
-                            <input name="name" />
+                            <input name="name" id="contact"/>
       <div class="text-center">
-        <button>Register</button>
+        <button onclick="submit()">Register</button>
       </div>
                            
                           </div>
@@ -1367,5 +1367,42 @@
     <script src="js/designesia.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/countdown-custom.js"></script>
+
+    <script>
+          async function submit() {
+
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const contact = document.getElementById('contact').value;
+
+
+
+
+const comment = `contact - ${contact}`;
+
+
+var payload = {
+    "name": name,
+    "email": email,
+    "sponsor": "contact-" + contact,
+    "message": comment,
+    "website": "investorday"
+};
+const rawResponse = await fetch('https://api.khubero.com/website/contact', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+});
+const content = await rawResponse.json();
+
+console.log(content);
+alert("Thanks, We will connect you soon!");
+document.getElementById("model_close").click();
+}
+</script>
+    </script>
   </body>
 </html>
