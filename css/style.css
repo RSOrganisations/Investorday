@@ -3258,7 +3258,7 @@ border:solid 1px #ddd;
 	border-top: 0px;
 	padding-bottom:5px;
 	text-align:center;	
-	min-height: 365px;
+	min-height: 492px;
 }
 .pricing-s1 .bottom ul {
 	list-style: none;
@@ -4332,6 +4332,7 @@ overflow: hidden;
 width:100%;
 position:absolute;
 z-index:10;
+margin-top: 200px !important;
 }
 
 
@@ -7693,30 +7694,31 @@ display:table;
 padding: 30px;
     background-size: cover;
     background: #ddffe7;
-    width: 300px;
-    position: absolute;
-    top: 0;
-    right: 67px;
-	border-radius: 40px;
 	}
-	.formWrap label, .formWrap input{
+	 .formWrap input{
 		width: 100%;
 		background: #ddffe7;
 		border-radius: 2px;
+		color: #000;
+		height: 36px;
+		margin-top: -4px;
+		font-size: 18px;
 	}
 	.formWrap label{
 		margin-top: 9px;
 		color: #000;
 		text-align: left;
+		width: 100%;
 	}
 	.formWrap button{
 		margin-top: 17px;
     border: 1px solid;
     border-radius: 18px;
-    padding: 4px 19px;
+    padding: 8px 19px;
 	background: #167d7f;
 	text-transform: uppercase;
 	color: #fff;
+	box-shadow: 4px 7px 4px 0px #b6d0be;
 	}
 	.btn-color{
 		background: #167d7f !important;
@@ -7751,4 +7753,33 @@ padding: 30px;
 		-webkit-animation: fill 0.5s infinite alternate;
 	
 }
-	
+.close{
+	width: 13px;
+    right: 10px;
+    position: absolute;
+    z-index: 11;
+    color: #000;
+    opacity: 1 !important;
+}
+.modal-body {
+    position: relative;
+    padding: 15px;
+    background: #ddffe7;
+    border-radius: 12px;
+}
+.fff{
+	color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+	.scheduleWrap table{
+		width: 100%;
+		margin: auto;
+	}
+
+	.scheduleWrap table td {
+		font-size: 12px;
+		color: #ddffe7;
+		padding: 5px;
+	}
+}
