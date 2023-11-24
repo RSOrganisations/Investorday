@@ -3258,7 +3258,6 @@ border:solid 1px #ddd;
 	border-top: 0px;
 	padding-bottom:5px;
 	text-align:center;	
-	min-height: 492px;
 }
 .pricing-s1 .bottom ul {
 	list-style: none;
@@ -3266,6 +3265,7 @@ border:solid 1px #ddd;
 	margin: 0px;
 	padding: 0px;
 	text-align:left;
+	min-height: 360px;
 }
 .pricing-s1 .bottom ul li {
 	line-height: 60px;
@@ -4092,12 +4092,11 @@ border:solid 1px #ddd;
 	.de-team-list .team-desc{
 		width:100%;
 		height:100%;
-		padding:40px;
+		padding:2px 40px;
 		padding-bottom:0;
-		position:absolute;
 		z-index:100;
 		top:100%;
-		background:#111;
+		background:#02141f;
 		color:#ccc;
 	}
 	
@@ -7738,7 +7737,7 @@ padding: 30px;
 		margin: auto;
 	}
 	.scheduleWrap table td{
-		font-size: 32px;
+		font-size: 18px;
 		color: #ddffe7;
 		padding: 20px;
 	}
@@ -7788,6 +7787,9 @@ padding: 30px;
 	gap: 36px;
     width: 362px;
 }
+.aboutdata img{
+	width: 90px;
+}
 .aboutdata div p{
     font-size: 12px;
 }
@@ -7811,4 +7813,7 @@ padding: 30px;
 .port p{
 	color: #fff !important;
 	font-size: 14px !important;
+}
+#section-hero{
+	height: 100vh!important;
 }
