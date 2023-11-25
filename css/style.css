@@ -7692,7 +7692,6 @@ display:table;
 	}
 
 	.width-icon{
-		width: 100px;
 		margin-top: 29px;
 	}
 	.text-logo{
@@ -7703,7 +7702,6 @@ display:table;
 		background-size: cover;
 		width: 200px;
 		height: 200px;
-		border: 2px solid #ddffe7;
 		border-radius: 50%;
 		margin: auto;
 	}
