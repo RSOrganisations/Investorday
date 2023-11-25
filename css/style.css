@@ -7789,27 +7789,7 @@ padding: 30px;
 .highlight{
 	color: #03a495;
 }
-@media screen and (max-width: 600px) {
-	.scheduleWrap table{
-		width: 100%;
-		margin: auto;
-	}
 
-	.scheduleWrap table td {
-		font-size: 12px;
-		color: #ddffe7;
-		padding: 5px;
-	}
-	.de-video-content {
-		width: 100%;
-		position: absolute;
-		z-index: 10;
-		margin-top: 30px !important;
-	}
-	.countdown-amount {
-		font-size: 32px;
-	}
-}
 .aboutdata{
 	display: flex;
 	gap: 36px;
@@ -7844,4 +7824,43 @@ padding: 30px;
 }
 #section-hero{
 	height: 100vh!important;
+}
+
+@media screen and (max-width: 600px) {
+	.home h2, .home .h2{
+		font-size: 22px !important;
+	}
+	.countdown-s2 .countdown-show4 .countdown-section {
+		width: 66px;
+		float: left;
+		background: rgba(255,255,255,.1);
+		padding: 20px 0 10px 0;
+		margin: 5px;
+	}
+	.home .countdown-amount {
+		width: auto;
+		margin: 0;
+		font-size: 26px;
+		font-weight: bold;
+	}
+	.scheduleWrap table{
+		width: 100%;
+		margin: auto;
+	}
+
+	.scheduleWrap table td {
+		font-size: 12px;
+		color: #ddffe7;
+		padding: 5px;
+	}
+	.de-video-content {
+		width: 100%;
+		position: absolute;
+		z-index: 10;
+		margin-top: 30px !important;
+	}
+	.countdown-amount {
+		font-size: 20px !important;
+	}
+
 }
