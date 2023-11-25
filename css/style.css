@@ -3211,9 +3211,27 @@ border:solid 1px #ddd;
 	padding-top:17px;
 	padding-bottom:17px;
 	}
+	.bottom-register{
+		position: absolute;
+		width: 100%;
+		bottom: -24px;
+		text-align: center;
+	}
+	.top-circle{
+		position: absolute;
+		width: 100%;
+		top: -20px;
+	}
+	.top-circle div{
+			width: 40px;
+			height: 40px;
+			background: #000;
+			margin: auto;
+			border-radius: 50%;
+		}
+	
 	
 .pricing-s1 {
-	overflow:hidden;
 	position:relative;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -3222,9 +3240,8 @@ border:solid 1px #ddd;
 	-webkit-transition: box-shadow 1s;
 	-moz-transition: box-shadow 1s;
 
-	-webkit-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, .4);
-	-moz-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, .4);
-	box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, .4);
+
+	box-shadow: 7px 8px 20px 3px #075d76;
 }
 .pricing-s1 .top {
 	color: #eee;
@@ -4084,7 +4101,9 @@ border:solid 1px #ddd;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
 	}
-	
+	.de-team-list:hover{
+		box-shadow: 5px 8px 12px 3px gray;
+	}
 	.de-team-list img{
 		width:100%;
 	}
@@ -7769,7 +7788,9 @@ padding: 30px;
 .fff{
 	color: #fff;
 }
-
+.highlight{
+	color: #03a495;
+}
 @media screen and (max-width: 600px) {
 	.scheduleWrap table{
 		width: 100%;
