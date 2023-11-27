@@ -7745,13 +7745,20 @@ padding: 30px;
 
 	}
 	.scheduleWrap{
-		background: linear-gradient(to bottom, #031721, #025e50,#031722 );
-		padding: 100px 0PX;
+		background:transparent;
+		padding: 50px 0PX;
 		border-radius: 50px;
 	}
 	.scheduleWrap table{
-		width: 90%;
+		width: 80%;
 		margin: auto;
+		border: 2px solid #086154;
+		padding: 40px;
+		border-radius: 20px;
+
+	}
+	.scheduleWrap table:hover{
+		box-shadow: -1px 1px 20px 3px #105950;
 	}
 	.scheduleWrap table td{
 		font-size: 18px;
@@ -7802,17 +7809,17 @@ padding: 30px;
     font-size: 12px;
 }
 .aboutdata div p:first-child{
-	color: orangered;
+	color: #0BB68C;
     font-size: 33px;
     font-weight: 600;
 	margin: 0px;
 }
 .b-t{
-	border-top: 1px solid orangered;
+	border-top: 1px solid #0BB68C;
 
 }
 .b-b{
-	border-bottom: 1px solid orangered;
+	border-bottom: 1px solid #0BB68C;
 
 }
 .port{
@@ -7830,6 +7837,12 @@ padding: 30px;
 }
 #passes, #about, #section-features, #speakers, #partners{
 	padding-top: 0px;
+}
+#counter div{
+	padding: 3px 4px;
+    border-radius: 4px;
+    margin-top: 8px;
+	background: #fffafa1c;
 }
 @media screen and (max-width: 600px) {
 	.event-left{
@@ -7862,6 +7875,9 @@ padding: 30px;
 		width: 100%;
 		margin: auto;
 	}
+	/* .scheduleWrap tr:nth-child(even) {
+		background-color: #f2f2f2;
+	  } */
 
 	.scheduleWrap table td {
 		font-size: 12px;
