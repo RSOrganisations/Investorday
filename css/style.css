@@ -7844,6 +7844,30 @@ padding: 30px;
     margin-top: 8px;
 	background: #fffafa1c;
 }
+.linear-wipe {
+	text-align: center;
+	background: linear-gradient(to right, #FFF 20%, var(--primary-color-1) 40%, #FF0 60%, var(--primary-color-1) 80%);
+	background-size: 200% auto;
+	color: #000;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: shine 1s linear infinite;
+			animation: shine 1s linear infinite;
+  }
+  @-webkit-keyframes shine {
+	to {
+	  background-position: 200% center;
+	}
+  }
+  @keyframes shine {
+	to {
+	  background-position: 200% center;
+	}
+  }
+
+
 @media screen and (max-width: 600px) {
 	.event-left{
 		margin-bottom: 44px !important;
