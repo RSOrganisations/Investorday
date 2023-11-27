@@ -4350,9 +4350,17 @@ overflow: hidden;
 width:100%;
 position:absolute;
 z-index:10;
-margin-top: 200px !important;
+margin-top: 150px !important;
 }
-
+.title-3{
+	margin-bottom: 70px;
+}
+.aboutCompany h1{
+	margin-bottom: 20px;
+}
+.aboutCompany ul li{
+	font-size: 30px;
+}
 
 .de-video-overlay{
 position:absolute;
@@ -7799,14 +7807,18 @@ padding: 30px;
 
 .aboutdata{
 	display: flex;
-	gap: 36px;
-    width: 362px;
+	gap: 15px;
+	justify-content: space-evenly;
 }
 .aboutdata img{
-	width: 90px;
+	width: 150px;
 }
 .aboutdata div p{
     font-size: 12px;
+}
+.align-middle{
+	align-items: center;
+    display: flex;
 }
 .aboutdata div p:first-child{
 	color: #0BB68C;
@@ -7835,14 +7847,13 @@ padding: 30px;
 .lead{
 	min-height: 71px;
 }
-#passes, #about, #section-features, #speakers, #partners{
+#passes, #section-features, #speakers, #partners{
 	padding-top: 0px;
 }
 #counter div{
 	padding: 3px 4px;
     border-radius: 4px;
     margin-top: 8px;
-	background: #fffafa1c;
 }
 .linear-wipe {
 	text-align: center;
@@ -7921,6 +7932,14 @@ padding: 30px;
 	}
 	.countdown-amount {
 		font-size: 20px !important;
+	}
+	.aboutdata {
+		flex-direction: column;
+	}
+	.align-middle {
+		text-align: center;
+		display: unset;
+
 	}
 
 }
