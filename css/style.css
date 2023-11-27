@@ -7866,7 +7866,12 @@ padding: 30px;
 	  background-position: 200% center;
 	}
   }
-
+  button:disabled,
+  button[disabled]{
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+  }
 
 @media screen and (max-width: 600px) {
 	.event-left{

@@ -1409,7 +1409,7 @@
                             <label>Contact no.</label>
                             <input name="name" id="contact"/>
       <div class="text-center">
-        <button onclick="submit()">Register</button>
+        <button onclick="submit()" id="submitBtn">Register</button>
       </div>
                            
                           </div>
@@ -1513,7 +1513,15 @@ const name = document.getElementById('name').value;
 const email = document.getElementById('email').value;
 const contact = document.getElementById('contact').value;
 
+if(!name || !email || !contact){
+    alert("Please enater mandatory fields");
 
+    return 
+}
+else{
+    document.getElementById("submitBtn").disabled = true;
+
+}
 
 
 const comment = `contact - ${contact}`;
@@ -1534,6 +1542,8 @@ const rawResponse = await fetch('https://api.khubero.com/website/contact', {
     },
     body: JSON.stringify(payload)
 });
+document.getElementById("submitBtn").disabled = false;
+
 const content = await rawResponse.json();
 
 console.log(content);
