@@ -1871,7 +1871,7 @@ border:solid 1px #ddd;
 	margin-bottom:30px;
 	}
 	
-	/* breadcrumb */
+	/* */
 	/* ------------------------------ */
 	.crumb {
 	color:#777;
@@ -7842,13 +7842,16 @@ padding: 30px;
 	font-size: 14px !important;
 }
 #section-hero{
-	height: 100vh!important;
+	/* height: 100vh! */
 }
 .lead{
 	min-height: 71px;
 }
-#passes, #section-features, #speakers, #partners, #about{
+#passes, #section-features, #speakers, #partners{
 	padding-top: 0px;
+}
+#about{
+	padding-bottom: 0px;
 }
 #counter div{
 	padding: 3px 4px;
@@ -7883,8 +7886,14 @@ padding: 30px;
 	background-color: #cccccc;
 	color: #666666;
   }
+  .videoHome{
+	height: 800px;
+  }
 
 @media screen and (max-width: 600px) {
+	.videoHome{
+		height: 600px;
+	  }
 	.event-left{
 		margin-bottom: 44px !important;
 	}
