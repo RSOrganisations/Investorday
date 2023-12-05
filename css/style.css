@@ -4126,6 +4126,7 @@ border:solid 1px #ddd;
 	.de-team-list .team-desc h3{
 		color:#fff;
 		margin-bottom:5px;
+		min-height: 51px;
 	}
 	
 	.de-team-list .social{
@@ -4551,6 +4552,9 @@ p.intro{
 	font-size:16px;
 	font-weight:500;
 	line-height:1.7em;
+}
+p.lead{
+	min-height: 95px;
 }
 
 .table-bordered, .table-bordered td{
