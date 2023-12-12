@@ -4447,6 +4447,12 @@ overflow:hidden;
 	width:100%;
 	height: 500px;
 }
+.pitch h3{
+	margin-top: 0px;
+}
+.apply-now{
+	text-align: left;
+}
 
 /* ================================================== */
 /* call to action */
@@ -4542,6 +4548,7 @@ background:#555;
 .label {
 font-family: "Roboto",Arial, Helvetica, sans-serif;
 }
+
 
 table thead {
 font-weight: bold;
@@ -7895,7 +7902,16 @@ padding: 30px;
 	object-fit: cover;
   }
 
+#pitchers{
+	padding-top: 0px;
+}
+#pitchers img{
+	border-top-right-radius: 71px;
+}
 @media screen and (max-width: 600px) {
+	.apply-now{
+		text-align: center;
+	}
 	.videoHome{
 		height: 600px;
 	  }
