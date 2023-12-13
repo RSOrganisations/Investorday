@@ -7966,12 +7966,14 @@ padding: 30px;
 .active .icon {
     transform: rotate(45deg);
 }
-
+#faq{
+	padding-top: 0px;
+}
 
 @media screen and (max-width: 600px) {
 	.highlights{
 		padding-right: 0px;
-		line-height: 20px;
+		line-height: 32px;
 	}
 	.apply-now{
 		text-align: center;
