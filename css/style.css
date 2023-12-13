@@ -7908,7 +7908,71 @@ padding: 30px;
 #pitchers img{
 	border-top-right-radius: 71px;
 }
+.highlights{
+	padding-right: 100px;
+	line-height: 32px;
+}
+
+
+.accordion-item {
+	background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+    background-color: #167d7f; /* Soft purple */
+    color: #FFFFFF; /* White text */
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #167d7f; /* Darker shade of purple */
+}
+
+.accordion-content {
+    background-color: #FAFAFA; /* Very light grey for content */
+    overflow: hidden;
+    padding: 0 15px;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    line-height: 1.5;
+	text-align: left;
+	color: #000;
+	font-weight: 600;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.active .icon {
+    transform: rotate(45deg);
+}
+
+
 @media screen and (max-width: 600px) {
+	.highlights{
+		padding-right: 0px;
+		line-height: 20px;
+	}
 	.apply-now{
 		text-align: center;
 	}
