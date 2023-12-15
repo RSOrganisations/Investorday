@@ -185,7 +185,7 @@
                       <div class="h2 padding10 pt0 pb0">
                         <i class="i_h2 fa fa-map-marker id-color"></i
                         ><span class="linear-wipe">
-                          Arya Auditorium, Greater Kailash
+                         <a target="_blank" href="https://www.google.com/maps/place/Arya+Auditorium,+Raja+Dhirsain+Marg,+Near+ISKCON,+C+Block,+Kailash+Hills,+East+of+Kailash,+New+Delhi,+Delhi+110065/@28.5569669,77.2548805,16z/data=!4m6!3m5!1s0x390ce3b80ea79923:0x3759bce2ce26375d!8m2!3d28.5569669!4d77.2548805!16s%2Fg%2F11b77fxqzn?hl=en-in">Arya Auditorium, East of Kailash</a> 
                         </span>
                       </div>
 
@@ -731,7 +731,7 @@
             <div class="spacer-single"></div>
             <div class="row align-items-center fff">
               <div class="col-lg-6 mb-sm-30 text-center wow fadeInRight">
-                <div>
+                <div class="videoWrap">
                   <!-- <img src="./images/slider/pitch.png" style="width: 280px;" /> -->
                   <video
                     height="210"
@@ -1774,6 +1774,8 @@
                   <input name="name" placeholder="Enter Contact Number"  id="contact" />
                   <label>Email ID<span>*</span></label>
                   <input name="email" placeholder="Enter Email Address"  id="email" />
+                  <label>Linkedin Profile url</label>
+                  <input name="linkdin" id="linkdin" placeholder="Enter Your Linkdin Profile URL" />
 
                     <div class="text-center">
                       <button onclick="submit()" id="submitSecondModal">
@@ -1955,6 +1957,7 @@
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const contact = document.getElementById("contact").value;
+        const linkdin = document.getElementById("linkdin").value;
 
         if (!name || !email || !contact) {
           alert("Please enater mandatory fields");
@@ -1964,7 +1967,7 @@
           document.getElementById("submitBtn").disabled = true;
         }
 
-        const comment = `contact - ${contact}`;
+        const comment = `contact - ${contact}, Lonkdin url - ${linkdin}`;
 
         var payload = {
           name: name,

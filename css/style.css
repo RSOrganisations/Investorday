@@ -7978,8 +7978,13 @@ padding: 30px;
 #faq{
 	padding-top: 0px;
 }
-
+.videoWrap{
+	padding: 0px 120px;
+}
 @media screen and (max-width: 600px) {
+	.videoWrap{
+		padding: 0px 0px;
+	}
 	.highlights{
 		padding-right: 0px;
 		line-height: 32px;
