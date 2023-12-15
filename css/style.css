@@ -329,6 +329,11 @@ overflow:visible;
 	margin:0;
 	padding:0;
 	}	
+	.modal-content {
+		position: relative;
+		background-color: #0a524a !important;
+		
+	}
 	
 	.de-navbar-left header #mainmenu > li{
 	display:block !important;
@@ -7728,20 +7733,24 @@ display:table;
 		
 padding: 30px;
     background-size: cover;
-    background: #ddffe7;
+    background: #0a524a;
 	}
 	 .formWrap input{
 		width: 100%;
-		background: #ddffe7;
+		background: transparent;
 		border-radius: 4px;
-		color: #000;
+		color: #fff;
 		height: 36px;
 		margin-top: -4px;
 		font-size: 18px;
+		border: none;
+		border-bottom: 1px solid #fff;
+		border-radius: 0px;
+
 	}
 	.formWrap label{
 		margin-top: 9px;
-		color: #000;
+		color: #fff;
 		text-align: left;
 		width: 100%;
 	}
@@ -7806,7 +7815,7 @@ padding: 30px;
 .modal-body {
     position: relative;
     padding: 15px;
-    background: #ddffe7;
+	background: #0a524a;
     border-radius: 12px;
 }
 .fff{

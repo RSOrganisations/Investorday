@@ -761,7 +761,7 @@
                     type="button"
                     class="btn btn-info btn-lg btn-color"
                     data-toggle="modal"
-                    data-target="#myModal"
+                    data-target="#applyModal"
                   >
                     APPLY NOW
                   </button>
@@ -1718,53 +1718,46 @@
         <!-- First Modal -->
         <div
           class="modal fade"
-          id="firstModal"
+          id="applyModal"
           tabindex="-1"
           role="dialog"
           aria-labelledby="firstModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-hidden="true"
-                >
-                  &times;
-                </button>
-                <h4 class="modal-title" id="firstModalLabel">Enter Text</h4>
-              </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
               <div class="modal-body">
-                <form id="firstForm">
-                  <div class="form-group">
-                    <label for="textInput">contact Number</label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="textInput"
-                      required
-                    />
+                <div class="formWrap">
+                  <label>Name<span>*</span></label>
+                  <input name="name" placeholder="Enter Name"  id="name" />
+                  <label>Number<span>*</span></label>
+                  <input name="name" placeholder="Enter Contact Number"  id="contact" />
+                  <label>Email ID<span>*</span></label>
+                  <input name="email" placeholder="Enter Email Address"  id="email" />
+                  <label>Company Name</label>
+                  <input name="company" placeholder="Enter Company Name" id="company" />
+                  <label>Linkedin Profile url</label>
+                  <input name="linkdin" id="linkdin" placeholder="Enter Your Linkdin Profile URL" />
+
+                  <div class="text-center">
+                    <button onclick="applyNow()" id="submitSecondModal">
+                      Apply Now
+                    </button>
                   </div>
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="submitFirstModal"
-                  >
-                    Submit
-                  </button>
-                </form>
+                  <br />
+                  <h4 class="text-center highlight">First 100 slots free!</h4>
+                </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         <!-- Second Modal -->
         <div
           class="modal fade"
-          id="secondModal"
+          id="firstModal"
           tabindex="-1"
           role="dialog"
           aria-labelledby="secondModalLabel"
@@ -1776,11 +1769,11 @@
                 <div class="modal-body">
                   <div class="formWrap">
                     <label>Name<span>*</span></label>
-                    <input name="name" id="name" />
-                    <label>Number<span>*</span></label>
-                    <input name="name" id="contact" />
-                    <label>Email ID<span>*</span></label>
-                    <input name="email" id="email" />
+                    <input name="name" placeholder="Enter Name"  id="name" />
+                  <label>Number<span>*</span></label>
+                  <input name="name" placeholder="Enter Contact Number"  id="contact" />
+                  <label>Email ID<span>*</span></label>
+                  <input name="email" placeholder="Enter Email Address"  id="email" />
 
                     <div class="text-center">
                       <button onclick="submit()" id="submitSecondModal">
@@ -1982,6 +1975,50 @@
         };
         const rawResponse = await fetch(
           "https://api.khubero.com/website/contact",
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          }
+        );
+        document.getElementById("submitBtn").disabled = false;
+
+        const content = await rawResponse.json();
+
+        console.log(content);
+        alert("Thanks, We will connect you soon!");
+        document.getElementById("model_close").click();
+      }
+    </script>
+     <script>
+      async function applyNow() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const contact = document.getElementById("contact").value;
+        const company = document.getElementById("company").value;
+        const linkdin = document.getElementById("linkdin").value;
+        if (!name || !email || !contact) {
+          alert("Please enater mandatory fields");
+
+          return;
+        } else {
+          document.getElementById("submitBtn").disabled = true;
+        }
+
+        const comment = `contact - ${contact}, Company- ${company}, Linkdin Url - ${linkdin}`;
+
+        var payload = {
+          name: name,
+          email: email,
+          sponsor: "contact-" + contact,
+          message: comment,
+          website: "investorday",
+        };
+        const rawResponse = await fetch(
+          "https://api.khubero.com/website/contactt",
           {
             method: "POST",
             headers: {
