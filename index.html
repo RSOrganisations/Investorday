@@ -514,43 +514,7 @@
 
               <div class="clearfix"></div>
 
-              <div class="col mb30 wow fadeInUp">
-                <!-- team member -->
-                <div class="de-team-list">
-                  <div class="team-pic">
-                    <img
-                      src="images/logo/prateek.png"
-                      class="img-responsive"
-                      alt=""
-                    />
-                  </div>
-                  <div class="team-desc">
-                    <h3>Saurabh Pareek</h3>
-                    <p class="lead">
-                      Investment Director, Circulate Capital <br />
-                      Ex-Bain & Ex EY IIM Graduate
-                    </p>
-                    <div class="small-border"></div>
-
-                    <div class="social text-center">
-                      <a
-                        href="https://www.linkedin.com/in/saurabh-pareek-274213b/ "
-                        target="_blank"
-                      >
-                        <img
-                          src="./images/logo/3b.png"
-                          style="width: 100px; margin: auto"
-                        />
-                      </a>
-                      <!-- <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-										<a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-										<a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-										<a href="#"><i class="fa fa-skype fa-lg"></i></a> -->
-                    </div>
-                  </div>
-                </div>
-                <!-- team close -->
-              </div>
+           
 
               <div class="col mb30 wow fadeInUp">
                 <!-- team member -->
@@ -732,7 +696,7 @@
                 <div class="videoWrap">
                   <!-- <img src="./images/slider/pitch.png" style="width: 280px;" /> -->
                   <video
-                    height="210"
+                    height="400"
                     controls=""
                     preload="metadata"
                     class="w-100"
@@ -748,8 +712,8 @@
               >
                 <h3 class="highlights">
                   Send your
-                  <span class="highlight">one minute pitch </span>video
-                  <br />And get a chance to pitch infront of the
+                  <span class="highlight"> 1 minute pitch </span>video
+                  <br />Get a chance to pitch infront of the
                   <span class="highlight"> 100+ INVESTORS </span>
                 </h3>
 
@@ -1723,7 +1687,7 @@
           aria-hidden="true"
         >
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content" id="applyContent">
             <div class="modal-body">
               <div class="modal-body">
                 <div class="formWrap">
@@ -1737,7 +1701,7 @@
                   <input name="company" placeholder="Enter Company Name" id="company" />
                   <label>Linkedin Profile </label>
                   <input name="linkdin" id="linkdin" placeholder="Enter Your Linkdin Profile " />
-
+                  <p class="error text-left" id="apply_error"></p>
                   <div class="text-center">
                     <button onclick="applyNow()" id="submitSecondModal">
                       Apply Now
@@ -1761,7 +1725,7 @@
           aria-hidden="true"
         >
           <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content" id="regContent">
               <div class="modal-body">
                 <div class="modal-body">
                   <div class="formWrap">
@@ -1773,7 +1737,7 @@
                   <input name="email" placeholder="Enter Email Address"  id="reg_email" />
                   <label>Linkedin Profile </label>
                   <input name="linkdin" id="reg_linkdin" placeholder="Enter Your Linkdin Profile" />
-
+                  <p class="error text-left" id="reg_error"></p>
                     <div class="text-center">
                       <button onclick="submit()" id="submitSecondModal">
                         Register
@@ -1950,70 +1914,115 @@
     <script src="js/countdown-custom.js"></script>
 
     <script>
+        var reg = "^[0-9]*$";
+  var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  function validURL(str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return !!pattern.test(str);
+}
       async function submit() {
         const name = document.getElementById("reg_name").value;
         const email = document.getElementById("reg_email").value;
         const contact = document.getElementById("reg_contact").value;
         const linkdin = document.getElementById("reg_linkdin").value;
-
-        if (!name || !email || !contact) {
-          alert("Please enater mandatory fields");
-
-          return;
-        } else {
+        document.getElementById("reg_error").innerHTML = "";
+       
+  if (!name) {
+    document.getElementById("reg_error").innerHTML = "Name is mandatory!";
+  } else if (!contact) {
+    document.getElementById("reg_error").innerHTML = "Contact is mandatory!";
+  } else if (!contact.match(reg) || contact.length !== 10) {
+    document.getElementById("reg_error").innerHTML = "Contact should be 10 digit!";
+  } 
+  else if(!email){
+    document.getElementById("reg_error").innerHTML = "Email is mandatory!";
+  }
+  
+  else if (email && !email.match(regex)) {
+    document.getElementById("reg_error").innerHTML = "Invalid email address!";
+  }
+  else if(!validURL(linkdin)){
+    document.getElementById("reg_error").innerHTML = "Invalid linkdin profile!";
+  }
+  
+  else {
           document.getElementById("submitBtn").disabled = true;
-        }
-
+          
         const comment = `contact - ${contact}, Lonkdin url - ${linkdin}`;
 
-        var payload = {
-          name: name,
-          email: email,
-          sponsor: "contact-" + contact,
-          message: comment,
-          website: "investorday",
-        };
-        const rawResponse = await fetch(
-          "https://api.khubero.com/website/contact",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          }
-        );
-        document.getElementById("submitBtn").disabled = false;
+var payload = {
+  name: name,
+  email: email,
+  sponsor: "contact-" + contact,
+  message: comment,
+  website: "investorday",
+};
+const rawResponse = await fetch(
+  "https://api.khubero.com/website/contact",
+  {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  }
+);
+document.getElementById("submitBtn").disabled = false;
 
-        const content = await rawResponse.json();
+const content = await rawResponse.json();
 
-        console.log(content);
-        alert("Thanks, We will connect you soon!");
-        document.getElementById("model_close").click();
+window.location.href = "https://climifi.com/register/";
+        
+
+  }
+
+
+
       }
     </script>
      <script>
+    
+     
       async function applyNow() {
+
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const contact = document.getElementById("contact").value;
         const company = document.getElementById("company").value;
         const linkdin = document.getElementById("linkdin").value;
-        if (!name || !email || !contact) {
-          alert("Please enater mandatory fields");
+        document.getElementById("apply_error").innerHTML = "";
 
-          return;
-        } else {
-          document.getElementById("submitBtn").disabled = true;
-        }
+        if (!name) {
+    document.getElementById("apply_error").innerHTML = "Name is mandatory!";
+  } else if (!contact) {
+    document.getElementById("apply_error").innerHTML = "Contact is mandatory!";
+  } else if (!contact.match(reg) || contact.length !== 10) {
+    document.getElementById("apply_error").innerHTML = "Contact should be 10 digit!";
+  } 
+  else if(!email){
+    document.getElementById("apply_error").innerHTML = "Email is mandatory!";
+  }
+  
+  else if (email && !email.match(regex)) {
+    document.getElementById("apply_error").innerHTML = "Invalid email address!";
+  }
+  else if(!validURL(linkdin)){
+    document.getElementById("apply_error").innerHTML = "Invalid linkdin profile!";
+  }
+  else{
 
-        const comment = `contact - ${contact}, Company- ${company}, Linkdin Url - ${linkdin}`;
+        const comment = `Apply now enquiry ===>  contact - ${contact}, Company- ${company}, Linkdin Url - ${linkdin}`;
 
         var payload = {
           name: name,
           email: email,
-          sponsor: "contact-" + contact,
           message: comment,
           website: "investorday",
         };
@@ -2032,10 +2041,10 @@
 
         const content = await rawResponse.json();
 
-        console.log(content);
-        alert("Thanks, We will connect you soon!");
-        document.getElementById("model_close").click();
+        window.location.href = "https://climifi.com/apply/";
+
       }
+    }
     </script>
     <script>
       function openpopup(a) {
@@ -2107,5 +2116,10 @@
         $(".modal-backdrop").css("display", "none");
       });
     </script>
+
+
+<a  class="whats-app" href="https://api.whatsapp.com/send?phone=918448392753&text=Hello" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+</a>
   </body>
 </html>
