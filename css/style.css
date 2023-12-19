@@ -7711,7 +7711,7 @@ padding: 30px;
     background-size: cover;
     background: #0a524a;
 	}
-	 .formWrap input{
+	 .formWrap input, .formWrap select{
 		width: 100%;
 		background: transparent;
 		border-radius: 4px;
@@ -7723,6 +7723,9 @@ padding: 30px;
 		border-bottom: 1px solid #fff;
 		border-radius: 0px;
 
+	}
+	.formWrap option{
+		background:#042b26;
 	}
 	.formWrap label{
 		margin-top: 9px;

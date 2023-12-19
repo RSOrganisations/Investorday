@@ -1706,6 +1706,7 @@
                   <input name="company" placeholder="Enter Company Name" id="company" />
                   <label>Linkedin Profile </label>
                   <input name="linkdin" id="linkdin" placeholder="Enter Your Linkdin Profile " />
+                  
                   <p class="error text-left" id="apply_error"></p>
                   <div class="text-center">
                     <button onclick="applyNow()" id="submitSecondModal">
@@ -1742,6 +1743,12 @@
                   <input name="email" placeholder="Enter Email Address"  id="reg_email" />
                   <label>Linkedin Profile </label>
                   <input name="linkdin" id="reg_linkdin" placeholder="Enter Your Linkdin Profile" />
+                  <label>I Am </label>
+                  <select id="i_am">
+                    <option value="Founder">Founder</option>
+                    <option value="Investor">Investor</option>
+                    <option value="Pitcher">Pitcher</option>
+                  </select>
                   <p class="error text-left" id="reg_error"></p>
                     <div class="text-center">
                       <button onclick="submit()" id="submitSecondModal">
@@ -1936,6 +1943,7 @@
         const email = document.getElementById("reg_email").value;
         const contact = document.getElementById("reg_contact").value;
         const linkdin = document.getElementById("reg_linkdin").value;
+        const i_am = document.getElementById("i_am").value;
         document.getElementById("reg_error").innerHTML = "";
        
   if (!name) {
@@ -1959,7 +1967,7 @@
   else {
           document.getElementById("submitBtn").disabled = true;
           
-        const comment = `contact - ${contact}, Lonkdin url - ${linkdin}`;
+        const comment = `contact - ${contact}, Lonkdin url - ${linkdin}, Role - ${i_am}`;
 
 var payload = {
   name: name,
