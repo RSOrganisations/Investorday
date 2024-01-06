@@ -2062,14 +2062,14 @@
 }
 
       async function submit() {
-        trackSubmitEvent();
+       
         const name = document.getElementById("reg_name").value;
         const email = document.getElementById("reg_email").value;
         const contact = document.getElementById("reg_contact").value;
         const linkdin = document.getElementById("reg_linkdin").value;
         const i_am = document.getElementById("i_am").value;
         document.getElementById("reg_error").innerHTML = "";
-       
+        trackSubmitEvent(name,email,contact,linkdin,i_am);
   if (!name) {
     document.getElementById("reg_error").innerHTML = "Name is mandatory!";
   } else if (!contact) {
@@ -2254,12 +2254,14 @@ window.location.href = "https://climifi.com/register/";
 
 
 
-  function trackSubmitEvent() {
+  function trackSubmitEvent(name,email,contact,linkdin,i_am) {
     // Replace 'category', 'action', and 'label' with your desired values
     gtag('event', 'submit', {
-      'event_category': 'category',
-      'event_action': 'action',
-      'event_label': 'label'
+      'event_name': name,
+      'event_email': email,
+      'event_contact': contact,
+      'event_linkdin':linkdin,
+      'event_i_am':i_am
     });
   }
     </script>
