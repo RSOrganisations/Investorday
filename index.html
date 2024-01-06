@@ -2062,6 +2062,7 @@
 }
 
       async function submit() {
+        trackSubmitEvent();
         const name = document.getElementById("reg_name").value;
         const email = document.getElementById("reg_email").value;
         const contact = document.getElementById("reg_contact").value;
@@ -2250,6 +2251,17 @@ window.location.href = "https://climifi.com/register/";
         $("#secondModal").modal("hide");
         $(".modal-backdrop").css("display", "none");
       });
+
+
+
+  function trackSubmitEvent() {
+    // Replace 'category', 'action', and 'label' with your desired values
+    gtag('event', 'submit', {
+      'event_category': 'category',
+      'event_action': 'action',
+      'event_label': 'label'
+    });
+  }
     </script>
 
 
