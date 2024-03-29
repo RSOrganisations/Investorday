@@ -29,7 +29,7 @@ $(window).scroll(function() {
 
 $(function(){
 	$(".typed").typed({
-		strings: ["INVESTORS DAY"],
+		strings: ["INVESTORS DAY 2.0"],
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed

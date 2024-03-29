@@ -5157,8 +5157,7 @@ width:100%;
   width:100%;
 }
 
-	margin:5px;
-}
+
 
 /* clear fix */
 .grid:after {
@@ -5427,7 +5426,7 @@ a:hover, a:active, a:focus, img{
 }
 
 .de-flex-wrap{
-	background: 
+	/* background:  */
 	display: flex;
 	justify-content: space-between;
 }
