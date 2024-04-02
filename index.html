@@ -1911,6 +1911,9 @@
                   <input name="company" placeholder="Enter Company Name" id="company" />
                   <label>Linkedin Profile<span></span></label>
                   <input name="linkdin" id="linkdin" placeholder="Enter Your Linkdin Profile " />
+
+                  <label>Upload Pitch Deck<span></span></label>
+                  <input name="file" type="file" id="pitchdeck" placeholder="Upload pitch deck " />
                   
                   <p class="error text-left" id="apply_error"></p>
                   <div class="text-center">
@@ -2240,25 +2243,36 @@ window.location.href = "success.html";
     document.getElementById("submitSecondModal").disabled = true;
         const comment = `Apply now enquiry ===>  contact - ${contact}, Company- ${company}, Linkdin Url - ${linkdin}`;
 
+        var fileInput = document.getElementById('pitchdeck');
+    var file = fileInput.files[0];
+
+    const formData = new FormData();
+      formData.append("file", file);
+   
+
+
+
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('message', comment);
+        formData.append('website', 'investorday');
+
+
         var payload = {
           name: name,
           email: email,
           message: comment,
           website: "investorday",
         };
-        const rawResponse = await fetch(
-          "https://api.khubero.com/website/contact",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          }
-        );
+        //"https://api.khubero.com/website/contact"
+        const endpoint = 'https://api.khubero.com/website/websitefile';
+        const res = await fetch(endpoint, {
+  method: 'POST',
+  body: formData
+})
 
-        const content = await rawResponse.json();
+
+        const content = await res.json();
 
         window.location.href = "https://climifi.com/apply/";
 
