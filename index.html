@@ -1909,7 +1909,7 @@
                   <input name="email" placeholder="Enter Email Address"  id="email" />
                   <label>Company Name</label>
                   <input name="company" placeholder="Enter Company Name" id="company" />
-                  <label>Linkedin Profile<span>*</span></label>
+                  <label>Linkedin Profile<span></span></label>
                   <input name="linkdin" id="linkdin" placeholder="Enter Your Linkdin Profile " />
                   
                   <p class="error text-left" id="apply_error"></p>
@@ -1946,7 +1946,7 @@
                   <input name="contact" type="number" placeholder="Enter Contact Number"  id="reg_contact" />
                   <label>Email ID<span>*</span></label>
                   <input name="email" placeholder="Enter Email Address"  id="reg_email" />
-                  <label>Linkedin Profile<span>*</span></label>
+                  <label>Linkedin Profile<span></span></label>
                   <input name="linkdin" id="reg_linkdin" placeholder="Enter Your Linkdin Profile" />
                   <label>I Am </label>
                   <select id="i_am">
@@ -2167,9 +2167,9 @@
   else if (email && !email.match(regex)) {
     document.getElementById("reg_error").innerHTML = "Invalid email address!";
   }
-  else if(!validURL(linkdin)){
-    document.getElementById("reg_error").innerHTML = "Invalid linkdin profile!";
-  }
+  // else if(!validURL(linkdin)){
+  //   document.getElementById("reg_error").innerHTML = "Invalid linkdin profile!";
+  // }
   
   else {
           document.getElementById("submiFirst").disabled = true; 
@@ -2233,9 +2233,9 @@ window.location.href = "success.html";
   else if (email && !email.match(regex)) {
     document.getElementById("apply_error").innerHTML = "Invalid email address!";
   }
-  else if(!validURL(linkdin)){
-    document.getElementById("apply_error").innerHTML = "Invalid linkdin profile!";
-  }
+  // else if(!validURL(linkdin)){
+  //   document.getElementById("apply_error").innerHTML = "Invalid linkdin profile!";
+  // }
   else{
     document.getElementById("submitSecondModal").disabled = true;
         const comment = `Apply now enquiry ===>  contact - ${contact}, Company- ${company}, Linkdin Url - ${linkdin}`;
