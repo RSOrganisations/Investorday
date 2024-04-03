@@ -25,6 +25,7 @@ html, body {
 
 .submit-form h1{
    font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
 }
 .submit-form p {
    text-align: center;
