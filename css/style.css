@@ -7792,6 +7792,8 @@ padding: 30px;
 	}
 	.btn-color{
 		background: #167d7f !important;
+		/* margin-left: 10px; */
+		margin: 5px;
 
 	}
 	.bg-gradients{
