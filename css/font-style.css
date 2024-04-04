@@ -94,3 +94,8 @@ blockquote.testimonial-big{
 	font-style:none;
 	line-height:1.8em;
 }
+@media screen and (max-width: 990px){
+	.h1, .h2, .h3, h1, h2, h3 {
+		margin-top: 0;
+	}
+}

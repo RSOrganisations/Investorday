@@ -7697,7 +7697,7 @@ display:table;
 	}
 	
 	h1.title-3{
-		font-size:10vw;
+		font-size:9vw;
 	}
 	
 	.countdown-s1 .countdown-show4 .countdown-section {
@@ -7832,6 +7832,10 @@ padding: 30px;
 		-webkit-text-fill-color: #ffffff00;
 		-webkit-animation: fill 0.5s infinite alternate;
 	
+}
+#time{
+	color: #76c315;
+	text-align: center;
 }
 .close{
 	width: 13px;
