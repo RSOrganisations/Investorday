@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/pitchdeck.css">
+</head>
+<body>
+   <section id="pitchdeck" class="pitchdeck" >
+      <div class="pitchdeck-sec">
+        <h1 class="pitchdeck-text">Pitch Deck</h1>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p> -->
+      </div>
+      <div class="pitchdeck-content">
+        <div class="img-box">
+          <div class="pitchdeck-img">
+            <a href="">
+              <img src="images/logo/beerlogo.png" alt="" class="popup-trigger" data-popup-id="popup1" />
+            </a>
+          </div>
+          <div class="img-text">
+            <!-- <h3></h3> -->
+          </div>
+        </div>
+        <div class="img-box">
+          <div class="pitchdeck-img">
+            <a href="">
+              <img src="images/logo/climifilogo.png" alt="" class="popup-trigger" data-popup-id="popup1" />
+            </a>
+          </div>
+          <div class="img-text">
+            <!-- <h3></h3> -->
+          </div>
+        </div>
+        <div class="img-box">
+          <div class="pitchdeck-img">
+            <a href="">
+              <img src="images/logo/flagshiplogo.png" alt="" />
+            </a>
+          </div>
+          <div class="img-text">
+            <!-- <h3></h3> -->
+          </div>
+        </div>
+        <div class="img-box">
+          <div class="pitchdeck-img">
+            <a href="">
+              <img src="images/logo/ipvlogo.png" alt="" />
+            </a>
+          </div>
+          <div class="img-text">
+            <!-- <h3></h3> -->
+          </div>
+        </div>
+        <div class="img-box">
+          <div class="pitchdeck-img">
+            <a href="">
+              <img src="images/logo/lavalogo.png" alt="" />
+            </a>
+          </div>
+          <div class="img-text">
+            <!-- <h3></h3> -->
+          </div>
+        </div>
+        <div class="img-box">
+          <div class="pitchdeck-img">
+            <a href="">
+              <img src="images/logo/maavatarlogo.png" alt="" />
+            </a>
+          </div>
+          <div class="img-text">
+            <!-- <h3</h3> -->
+          </div>
+        </div>
+      </div>
+      <!-- <div class="button">
+        <a href="#" class="btn">View All</a>
+      </div> -->
+    </section>
+    <div class="popup" id="popup1">
+      <!-- <h2>Select one option</h2> -->
+      <button class="popup-btn" data-action="overview">Overview</button>
+
+      <button class="popup-btn" data-action="pitchdeck">Pitch Deck</button>
+      <button class="popup-btn" data-action="interested">Interested</button>
+   </div>
+
+   <script>
+    // JavaScript to handle popup functionality
+    document.addEventListener('DOMContentLoaded', function () {
+       const popups = document.querySelectorAll('.popup');
+       const triggers = document.querySelectorAll('.popup-trigger');
+ 
+       // Function to close all popups
+       function closePopups() {
+          popups.forEach(popup => {
+             popup.style.display = 'none';
+          });
+       }
+ 
+       triggers.forEach(trigger => {
+          trigger.addEventListener('click', function () {
+             const popupId = this.getAttribute('data-popup-id');
+             const popup = document.getElementById(popupId);
+ 
+             closePopups(); // Close all popups
+             popup.style.display = 'block'; // Show targeted popup
+          });
+       });
+ 
+       // Add event listener to close the popup when clicking outside of it
+       document.addEventListener('click', function (event) {
+          if (!event.target.closest('.popup') && !event.target.matches('.popup-trigger')) {
+             closePopups();
+          }
+       });
+ 
+       // Add click event listener to popup buttons
+      //  document.querySelectorAll('.popup-btn').forEach(button => {
+      //     button.addEventListener('click', function () {
+      //        closePopups(); // Close the popup
+      //        const action = this.getAttribute('data-action');
+      //        console.log('Button clicked:', action);
+            
+      //     });
+      //  });
+    });
+ </script>
+ 
+    
+</body>
+</html>
