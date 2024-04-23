@@ -44,7 +44,9 @@
   </form>
 </div>
 <script>
-      
+      function trackSubmitEvent(name, email, contact, role) {
+    console.log(`Form submitted: Name - ${name}, Email - ${email}, Contact - ${contact}, Role - ${role}`);
+}
    var reg = "^[0-9]*$";
 var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
