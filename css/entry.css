@@ -10,7 +10,7 @@ html, body {
 }
 
 .home2{
-   width: 90vw;
+   width: 500px;
   
    height: auto;
    padding: 20px 20px;
@@ -67,6 +67,11 @@ html, body {
  
    width: 80%;
  }
+ #i_am{
+  width: 100%;
+  outline: none;
+  padding-left: 5px;
+ }
  .buttonb{
    text-align: center;
  }
@@ -78,4 +83,9 @@ html, body {
    border-radius: 15px;
    color: white;
    text-align: center;
+ }
+ @media screen and (max-width:767px) {
+  .home2{
+    width: 90vw;
+  } 
  }
