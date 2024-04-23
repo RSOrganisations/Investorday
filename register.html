@@ -26,6 +26,12 @@
       <label for="name">Contact</label>
       
       <div class="h5"><i class="ri-phone-line"></i><input name="contact" type="number" placeholder="Enter Contact Number"  id="reg_contact" /></div>
+      <label for="name">I Am </label>
+      <select class="h5" id="i_am">
+        <option value="Founder">Founder</option>
+        <option value="Investor">Investor</option>
+        <option value="Delegate">Delegate</option>
+      </select>
       <br>
       <div class="buttonb">
          <button class="b" type="submit" id="submiFirst" value="Submit">Submit</button>
@@ -59,10 +65,12 @@ return !!pattern.test(str);
 const name = document.getElementById("reg_name").value;
 const email = document.getElementById("reg_email").value;
 const contact = document.getElementById("reg_contact").value;
+const i_am = document.getElementById("i_am").value;
+
 // const linkdin = document.getElementById("reg_linkdin").value;
 // const i_am = document.getElementById("i_am").value;
 document.getElementById("reg_error").innerHTML = "";
-//trackSubmitEvent(name,email,contact);
+trackSubmitEvent(name,email,contact,i_am);
 if (!name) {
 document.getElementById("reg_error").innerHTML = "Name is mandatory!";
 } else if (!contact) {

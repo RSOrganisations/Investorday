@@ -48,10 +48,10 @@ html, body {
 }
 .img-box{
    position: relative;
-   width: 300px;
-   height: 320px;
-   padding: 20px;
-   margin: 50px;
+   width: 250px;
+   height: 250px;
+   padding: 10px;
+   margin: 100px;
    background: #ffffff;
    box-shadow: 0px 0px 1vw rgba(0,0,0,0.5);
    display: inline-block;
@@ -59,15 +59,16 @@ html, body {
 }
 .pitchdeck-img{
    position: relative;
-   height: 260px;
-   width: 260px;
+   height: 230px;
+   width: 230px;
+   padding: 30px;
    border: 1px solid green;
    overflow: hidden;
 }
 .pitchdeck-img img{
    height: 100%;
    width: 100%;
-   object-fit: cover;
+   object-fit: contain;
    transition: 0.2s ease-in;
 }
 .img-text h3{
@@ -107,10 +108,10 @@ html, body {
        margin: auto;
        margin-top: 5px; 
        margin-bottom: 20px;
-       width: 280px;
+       width: 250px;
    }
    .pitchdeck-img{
-       width: 240px;
+       width: 230px;
    }
    .img-text h3{
        font-size: 19px;
