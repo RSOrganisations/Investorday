@@ -16,7 +16,7 @@ html, body {
    text-align: center;
    padding-top: 50px;
 }
-.row{
+.rows{
    display: flex;
    margin-top: 100px;
    justify-content: space-evenly;
