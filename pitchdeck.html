@@ -20,7 +20,7 @@
                     Overview
                   </a>
                   <a href="images/docs/BPH Mobility.pdf" target="blank">Pitchdeck</a>
-                  <a href="">Interested</a>
+                  <a href="javascript:void(0)" onClick="interestedCall('BPH_Mobility')">Interested</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                   Overview
                 </a>
                 <a href="">Pitchdeck</a>
-                <a href="">Interested</a>
+                <a href="javascript:void(0)" onClick="interestedCall('cluix')">Interested</a>
               </div>
           </div>
         </div>
@@ -44,7 +44,7 @@
                   Overview
                 </a>
                 <a href="">Pitchdeck</a>
-                <a href="">Interested</a>
+                <a href="javascript:void(0)" onClick="interestedCall('integerspin')">Interested</a>
               </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
                 Overview
               </a>
               <a href="">Pitchdeck</a>
-              <a href="">Interested</a>
+              <a href="javascript:void(0)" onClick="interestedCall('xtendspace')">Interested</a>
             </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
                 Overview
               </a>
               <a href="">Pitchdeck</a>
-              <a href="">Interested</a>
+              <a href="javascript:void(0)" onClick="interestedCall('zipbolt')">Interested</a>
             </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
                 Overview
               </a>
               <a href="">Pitchdeck</a>
-              <a href="">Interested</a>
+              <a href="javascript:void(0)" onClick="interestedCall('xtended')">Interested</a>
             </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
               Overview
             </a>
             <a href="">Pitchdeck</a>
-            <a href="">Interested</a>
+            <a href="javascript:void(0)" onClick="interestedCall('ritslogo')">Interested</a>
           </div>
       </div>
     </div>
@@ -104,7 +104,7 @@
               Overview
             </a>
             <a href="">Pitchdeck</a>
-            <a href="">Interested</a>
+            <a href="javascript:void(0)" onClick="interestedCall('lavalogo')">Interested</a>
           </div>
       </div>
     </div>
@@ -116,7 +116,7 @@
               Overview
             </a>
             <a href="">Pitchdeck</a>
-            <a href="">Interested</a>
+            <a href="javascript:void(0)" onClick="interestedCall('ipvlogo')">Interested</a>
           </div>
       </div>
     </div>
@@ -125,7 +125,40 @@
     
 </section>
  
+<script>
+  const user_email = localStorage.getItem('user_email');
+  console.log("useremail", user_email);
+  if(!user_email){
+    window.location.href = "register.html";
+  }
 
+async function interestedCall(interested_in){
+  alert(interested_in);
+
+  var payload = {
+    "email":user_email,
+    "interested_in":interested_in,
+    "website":"investorday"
+};
+const rawResponse = await fetch(
+"https://api.khubero.com/website/contact",
+{
+method: "PUT",
+headers: {
+Accept: "application/json",
+"Content-Type": "application/json",
+},
+body: JSON.stringify(payload),
+}
+);
+
+
+const content = await rawResponse.json();
+
+alert("Thanks, we will connect you soon");
+
+}
+</script>
     
 </body>
 </html>
