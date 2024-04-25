@@ -5,125 +5,127 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="css/pitchdeck.css">
+
 </head>
+
 <body>
-   <section id="pitchdeck" class="pitchdeck" >
-      <div class="pitchdeck-sec">
-        <h1 class="pitchdeck-text">Pitch Deck</h1>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p> -->
-      </div>
-      <div class="pitchdeck-content">
-        <div class="img-box">
-          <div id="1" class="pitchdeck-img">
-            <a href="">
-              <img src="images/logo/beerlogo.png" alt="" class="popup-trigger" data-popup-id="popup1" />
-            </a>
-          </div>
-          <div class="img-text">
-            <!-- <h3></h3> -->
+  <section class="campus">
+    <h1>Pitch Deck</h1>
+    <div class="rows">
+        <div class="campus-col">
+            <img src="images/logo/bph.png" alt="">
+            <div class="layer">
+                <div class="l">
+                  <a href="images/docs/Company details format_BPH_Mobility (1).docx" target="blank">
+                    Overview
+                  </a>
+                  <a href="images/docs/BPH Mobility.pdf" target="blank">Pitchdeck</a>
+                  <a href="">Interested</a>
+                </div>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/logo/cluix.png" alt="">
+            <div class="layer">
+              <div class="l">
+                <a href="">
+                  Overview
+                </a>
+                <a href="">Pitchdeck</a>
+                <a href="">Interested</a>
+              </div>
           </div>
         </div>
-        <div class="img-box">
-          <div id="2" class="pitchdeck-img">
-            <a href="">
-              <img src="images/logo/climifilogo.png" alt="" class="popup-trigger" data-popup-id="popup1" />
-            </a>
-          </div>
-          <div class="img-text">
-            <!-- <h3></h3> -->
-          </div>
-        </div>
-        <div class="img-box">
-          <div id="3" class="pitchdeck-img">
-            <a href="">
-              <img src="images/logo/flagshiplogo.png" alt="" />
-            </a>
-          </div>
-          <div class="img-text">
-            <!-- <h3></h3> -->
+        <div class="campus-col">
+            <img src="images/logo/integerspin.png" alt="">
+            <div class="layer">
+              <div class="l">
+                <a href="">
+                  Overview
+                </a>
+                <a href="">Pitchdeck</a>
+                <a href="">Interested</a>
+              </div>
           </div>
         </div>
-        <div class="img-box">
-          <div id="4" class="pitchdeck-img">
-            <a href="">
-              <img src="images/logo/ipvlogo.png" alt="" />
-            </a>
-          </div>
-          <div class="img-text">
-            <!-- <h3></h3> -->
-          </div>
-        </div>
-        <div class="img-box">
-          <div id="5" class="pitchdeck-img">
-            <a href="">
-              <img src="images/logo/lavalogo.png" alt="" />
-            </a>
-          </div>
-          <div class="img-text">
-            <!-- <h3></h3> -->
-          </div>
-        </div>
-        <div class="img-box">
-          <div id="6" class="pitchdeck-img">
-            <a href="">
-              <img src="images/logo/maavatarlogo.png" alt="" />
-            </a>
-          </div>
-          <div class="img-text">
-            <!-- <h3</h3> -->
-          </div>
+        <div class="campus-col">
+          <img src="images/logo/xte.png" alt="">
+          <div class="layer">
+            <div class="l">
+              <a href="">
+                Overview
+              </a>
+              <a href="">Pitchdeck</a>
+              <a href="">Interested</a>
+            </div>
         </div>
       </div>
-      <!-- <div class="button">
-        <a href="#" class="btn">View All</a>
-      </div> -->
-    </section>
-    <div class="popup" id="popup1">
-      <!-- <h2>Select one option</h2> -->
-      <button class="popup-btn" data-action="overview">Overview</button>
-
-      <button class="popup-btn" data-action="pitchdeck">Pitch Deck</button>
-      <button class="popup-btn" data-action="interested">Interested</button>
-   </div>
-
-   <script>
-   document.addEventListener('DOMContentLoaded', function () {
-   const popups = document.querySelectorAll('.popup');
-   const triggers = document.querySelectorAll('.popup-trigger');
-   const pitchdeckImages = document.querySelectorAll('.pitchdeck-img');
-
-   // Function to close all popups
-   function closePopups() {
-      popups.forEach(popup => {
-         popup.style.display = 'none';
-      });
-   }
-
-   triggers.forEach(trigger => {
-      trigger.addEventListener('click', function () {
-         const popupId = this.getAttribute('data-popup-id');
-         const popup = document.getElementById(popupId);
-
-         closePopups(); // Close all popups
-         popup.style.display = 'block'; // Show targeted popup
-      });
-   });
-
-   // Add event listener to close the popup when clicking outside of it
-   document.addEventListener('click', function (event) {
-      if (!event.target.closest('.popup') && !event.target.matches('.popup-trigger')) {
-         closePopups();
-      }
-   });
-
-   // Assign ID to pitchdeck-img elements
-   pitchdeckImages.forEach((img, index) => {
-      img.setAttribute('id', `pitchdeck-img-${index}`);
-   });
-});
-
- </script>
+      <div class="campus-col">
+          <img src="images/logo/zipbolt.png" alt="">
+          <div class="layer">
+            <div class="l">
+              <a href="">
+                Overview
+              </a>
+              <a href="">Pitchdeck</a>
+              <a href="">Interested</a>
+            </div>
+        </div>
+      </div>
+      <div class="campus-col">
+          <img src="images/logo/xtended.png" alt="">
+          <div class="layer">
+            <div class="l">
+              <a href="">
+                Overview
+              </a>
+              <a href="">Pitchdeck</a>
+              <a href="">Interested</a>
+            </div>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="images/logo/ritslogo.png" alt="">
+        <div class="layer">
+          <div class="l">
+            <a href="">
+              Overview
+            </a>
+            <a href="">Pitchdeck</a>
+            <a href="">Interested</a>
+          </div>
+      </div>
+    </div>
+    <div class="campus-col">
+        <img src="images/logo/lavalogo.png" alt="">
+        <div class="layer">
+          <div class="l">
+            <a href="">
+              Overview
+            </a>
+            <a href="">Pitchdeck</a>
+            <a href="">Interested</a>
+          </div>
+      </div>
+    </div>
+    <div class="campus-col">
+        <img src="images/logo/ipvlogo.png" alt="">
+        <div class="layer">
+          <div class="l">
+            <a href="">
+              Overview
+            </a>
+            <a href="">Pitchdeck</a>
+            <a href="">Interested</a>
+          </div>
+      </div>
+    </div>
+        
+    </div>
+    
+</section>
  
+
     
 </body>
 </html>

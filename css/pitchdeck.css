@@ -10,143 +10,80 @@ html, body {
 }
 
 
-.pitchdeck{
-   min-height: 100vh;
-   background-color: #ffffff82;
-   position: relative;
+.campus{
+   width: 80%;
+   margin: auto;
    text-align: center;
-   margin-top: 10vh;
+   padding-top: 50px;
 }
-
-.pitchdeck-text{
-   text-align: center;
-   font-size: 40px;
-   font-weight: 100;
-   color: #3d3d3d;
-}
-.pitchdeck-text span{
-   font-size: 45px;
-   font-weight: 600;
-   color: #ff0157;
-}
-.pitchdeck-sec p{
-   text-align: center;
-   margin-top: 10px;
-   margin-bottom: 7vh;
-   color: rgb(97, 97, 97);
-   font-size: 17px;
-}
-
-.pitchdeck-content{
-   /* min-height: 70vw; */
-   /* width: 65vw; */
-   /* margin: auto;  */
-   /* background-color: yellow; */
+.rows{
+   display: flex;
+   margin-top: 100px;
+   justify-content: space-evenly;
    flex-wrap: wrap;
-   position: relative;
-
+   gap: 50px;
+   /* flex-wrap:wrap ; */
+   
 }
-.img-box{
-   position: relative;
-   width: 250px;
-   height: 250px;
-   padding: 10px;
-   margin: 100px;
-   background: #ffffff;
-   box-shadow: 0px 0px 1vw rgba(0,0,0,0.5);
-   display: inline-block;
-
-}
-.pitchdeck-img{
-   position: relative;
-   height: 230px;
-   width: 230px;
-   padding: 30px;
-   border: 1px solid green;
-   overflow: hidden;
-}
-.pitchdeck-img img{
-   height: 100%;
-   width: 100%;
-   object-fit: contain;
-   transition: 0.2s ease-in;
-}
-.img-text h3{
-   font-size: 1.2vw;
-   margin-top: 1vw;
-   font-weight: 100;
-   color: #585757;
-   text-align: left;
-}
-.button{
-   text-align: center;
-   margin-top: 5vmax;
-}
-.button a{
-   text-decoration: none;
-   padding: 10px 27px;
-   background-color: #ff0157;
-   color: #fff;
-   transition: 0.5s;
-   font-size: 20px;
-}
-.button a:hover{
-   padding: 10px 35px;
-   letter-spacing: 2px;
+.campus-col{
+   /* flex-basis: 32%; */
    border-radius: 10px;
-}
-.pitchdeck-img img:hover{
-   scale: 1.1;
-}
-@media only screen and (max-width: 600px) {
-   .pitchdeck-content {
-       margin-top: 30px;
-       margin-bottom: 20px;
-   }
- 
-   .img-box{
-       margin: auto;
-       margin-top: 5px; 
-       margin-bottom: 20px;
-       width: 250px;
-   }
-   .pitchdeck-img{
-       width: 230px;
-   }
-   .img-text h3{
-       font-size: 19px;
-       
-   }
-
-}
-
-.popup {
-   display: none;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   /* background-color: white; */
-   padding: 20px;
-   border: 1px solid #ccc;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   /* margin-bottom: 30px; */
    height: 300px;
    width: 300px;
-   background-color: rgba(83, 82, 82, 0.731);
-   display: flex;
-   flex-direction: column;
-   
-   align-items: center;
-   justify-content: space-evenly;
-}
-.popup-btn{
-   padding: 15px;
-   width: 200px;
-   background-color: rgb(2, 88, 88);
-   border: 2px solid white;
-   font-size: 20px;
-   color: white;
+   padding: 10px;
+   position: relative;
+   border: 2px solid green;
 
+   overflow: hidden;
+}
+.campus-col img{
+   width: 100%;
+   height: 100%;
+   background-color: azure;
+   display: block;
+}
+.layer{
+   background: transparent;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.layer:hover{
+   background: rgba(2, 6, 88, 0.7);
+}
+.l{
+   
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   gap: 10px;
+}
+.l a{
+   text-decoration: none;
+   color: white;
+   margin: 0 20px;
+
+   padding: 10px;
+   background-color: rgb(4, 159, 4);
+   
+}
+.layer .l{
+   width: 100%;
+   font-weight: 500;
+   color: #fff;
+   font-size: 26px;
+   bottom: -200px;
+   left: 50%;
+   transform: translateX(-50%);
+   position: absolute;
+   transition: 0.5s;
+}
+.layer:hover .l{
+   bottom:25%;
+   opacity: 1;
 }
 
 
