@@ -44,6 +44,12 @@
   </form>
 </div>
 <script>
+  const user_email = localStorage.getItem('user_email');
+  console.log("useremail", user_email);
+  if(user_email){
+    window.location.href = "pitchdeck.html";
+  }
+
       function trackSubmitEvent(name, email, contact, role) {
     console.log(`Form submitted: Name - ${name}, Email - ${email}, Contact - ${contact}, Role - ${role}`);
 }
@@ -101,8 +107,10 @@ var payload = {
 name: name,
 email: email,
 sponsor: "contact-" + contact,
-message: "contact-" + contact,
+message: "contact-" + contact+", I am - "+i_am,
+interested_in:"N/A",
 website: "investorday",
+
 };
 const rawResponse = await fetch(
 "https://api.khubero.com/website/contact",
@@ -116,8 +124,9 @@ body: JSON.stringify(payload),
 }
 );
 
-
+localStorage.setItem('user_email',email);
 const content = await rawResponse.json();
+
 window.location.href = "pitchdeck.html";
 // window.location.href = "https://climifi.com/register/";
 
