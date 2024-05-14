@@ -217,13 +217,21 @@
 
                     <div>
                       <button
+                      type="button"
+                      class="btn btn-info btn-lg btn-color"
+                      data-toggle="modal"
+                      data-target="#applyModal"
+                    >
+                    REGISTER NOW
+                    </button>
+                      <!-- <button
                         type="button"
                         class="btn btn-info btn-lg btn-color"
                         data-toggle="modal"
                         data-target="#firstModal"
                       >
                         REGISTER NOW
-                      </button>
+                      </button> -->
                       <!-- <button
                       onclick="redirectToPage()"
                       type="button"
@@ -295,14 +303,23 @@
 
               <div class="apply-now">
                 <br />
-                <button
+                 <button
+                      onclick="redirectToPage()"
+                      type="button"
+                      class="btn btn-info btn-lg  btn-color"
+                  
+                      
+                    >
+                      SUBMIT PITCH DECK
+                    </button>
+                <!-- <button
                   type="button"
                   class="btn btn-info btn-lg btn-color"
                   data-toggle="modal"
                   data-target="#applyModal"
                 >
                 SUBMIT PITCH DECK
-                </button>
+                </button> -->
               </div>
 
               <div class="spacer10"></div>
@@ -2578,7 +2595,7 @@ window.location.href = "success.html";
     </script>
       <script>
         function redirectToPage() {
-          window.location.href = '#pitchers'; // Replace 'https://example.com' with the URL of the page you want to redirect to
+          window.location.href = '#'; // Replace 'https://example.com' with the URL of the page you want to redirect to
         }
       </script>
 
