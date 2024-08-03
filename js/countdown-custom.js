@@ -29,7 +29,7 @@ $(window).scroll(function() {
 
 $(function(){
 	$(".typed").typed({
-		strings: ["CLIMIFI STARTUP PITCH BATTLE"],
+		strings: [" STARTUP PITCH BATTLE"],
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
